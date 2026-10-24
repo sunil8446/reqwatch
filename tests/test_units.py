@@ -94,3 +94,25 @@ def test_lever_client_paginates_and_prefers_plain_text():
     fetch = lever.fetch_board("acme", transport=_mock_transport(handler))
     assert len(fetch.postings) == 101
     assert fetch.postings[0].description_raw == "plain"
+
+
+def test_greenhouse_skips_content_fetch_when_unchanged():
+    detail_calls = []
+    def handler(request):
+        url = str(request.url)
+        if url.endswith("/jobs"):
+            return httpx.Response(200, json={"jobs": [
+                {"id": 1, "title": "Data Engineer", "updated_at": "2026-10-20T00:00:00Z",
+                 "location": {"name": "NYC"}, "departments": []},
+                {"id": 2, "title": "ML Engineer", "updated_at": "2026-10-21T00:00:00Z",
+                 "location": {"name": "SF"}, "departments": []}]})
+        detail_calls.append(url)
+        return httpx.Response(200, json={"id": 2, "title": "ML Engineer",
+            "location": {"name": "SF"}, "departments": [], "content": "&lt;p&gt;x&lt;/p&gt;"})
+    known = {"1": ("Data Engineer", "2026-10-20T00:00:00Z")}
+    fetch = greenhouse.fetch_board("acme", transport=_mock_transport(handler), known=known)
+    assert fetch.content_fetches_skipped == 1
+    assert len(detail_calls) == 1 and detail_calls[0].endswith("/jobs/2")
+    by_id = {p.source_posting_id: p for p in fetch.postings}
+    assert by_id["1"].unchanged and by_id["1"].source_updated_at == "2026-10-20T00:00:00Z"
+    assert not by_id["2"].unchanged

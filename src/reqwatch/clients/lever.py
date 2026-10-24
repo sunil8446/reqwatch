@@ -16,7 +16,7 @@ BASE = "https://api.lever.co/v0/postings"
 PAGE = 100
 
 
-def fetch_board(board_token: str, *, transport=None) -> BoardFetch:
+def fetch_board(board_token: str, *, transport=None, known: dict | None = None) -> BoardFetch:
     ua = os.environ.get("REQWATCH_USER_AGENT", "Reqwatch/1.0 (job-market research; portfolio project)")
     jobs: list[dict] = []
     skip = 0

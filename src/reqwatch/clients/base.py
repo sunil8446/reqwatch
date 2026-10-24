@@ -22,6 +22,8 @@ class RawPosting:
     location: str | None
     department: str | None
     description_raw: str  # HTML or plain text as served; cleaned before storage, never stored raw
+    source_updated_at: str | None = None  # as reported by the source list endpoint
+    unchanged: bool = False  # title + updated_at match stored state: content fetch was skipped
 
 
 @dataclass
@@ -31,6 +33,7 @@ class BoardFetch:
     field_names: list[str]
     http_status: int
     postings_listed: int = 0    # every title in the list response, before filtering
+    content_fetches_skipped: int = 0  # kept postings whose content fetch was skipped as unchanged
 
 
     @property

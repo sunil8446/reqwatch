@@ -25,8 +25,10 @@ create table if not exists postings (
     -- consecutive successful board fetches in which this posting was absent.
     -- Closure requires miss_count >= 2 (guards against one flaky fetch).
     miss_count       int not null default 0,
+    source_updated_at text,  -- source-reported last-change stamp (Greenhouse list); drives fetch skipping
     unique (company_id, source_posting_id)
 );
+alter table postings add column if not exists source_updated_at text;
 create index if not exists idx_postings_company_status on postings(company_id, status);
 
 create table if not exists posting_versions (

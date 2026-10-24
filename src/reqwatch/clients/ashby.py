@@ -14,7 +14,7 @@ from .base import BoardFetch, RawPosting, get_with_backoff
 BASE = "https://api.ashbyhq.com/posting-api/job-board"
 
 
-def fetch_board(board_token: str, *, transport=None) -> BoardFetch:
+def fetch_board(board_token: str, *, transport=None, known: dict | None = None) -> BoardFetch:
     ua = os.environ.get("REQWATCH_USER_AGENT", "Reqwatch/1.0 (job-market research; portfolio project)")
     resp = get_with_backoff(f"{BASE}/{board_token}?includeCompensation=true", user_agent=ua, transport=transport)
     data = resp.json()

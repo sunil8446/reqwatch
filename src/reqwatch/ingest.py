@@ -61,6 +61,15 @@ def apply_board(conn: psycopg.Connection, run_id: uuid.UUID, company_id: int,
     seen_ids: set[str] = set()
     for raw in fetch.postings:
         seen_ids.add(raw.source_posting_id)
+        if raw.unchanged:
+            # Greenhouse content fetch was skipped: title + source updated_at
+            # match stored state, so the stored hash/text are still current.
+            conn.execute(
+                "update postings set last_seen_at=%s, miss_count=0, source_updated_at=%s "
+                "where company_id=%s and source_posting_id=%s",
+                (now, raw.source_updated_at, company_id, raw.source_posting_id))
+            totals.postings_seen += 1
+            continue
         cleaned = html_to_cleaned_text(raw.description_raw)
         digest = content_hash(raw.title, raw.location, raw.department, cleaned)
         row = conn.execute(
@@ -68,9 +77,9 @@ def apply_board(conn: psycopg.Connection, run_id: uuid.UUID, company_id: int,
             (company_id, raw.source_posting_id)).fetchone()
         if row is None:
             posting_id = conn.execute(
-                """insert into postings (company_id, source_posting_id, current_hash, first_seen_at, last_seen_at, status)
-                   values (%s,%s,%s,%s,%s,'open') returning id""",
-                (company_id, raw.source_posting_id, digest, now, now)).fetchone()[0]
+                """insert into postings (company_id, source_posting_id, current_hash, first_seen_at, last_seen_at, status, source_updated_at)
+                   values (%s,%s,%s,%s,%s,'open',%s) returning id""",
+                (company_id, raw.source_posting_id, digest, now, now, raw.source_updated_at)).fetchone()[0]
             conn.execute(
                 """insert into posting_versions (posting_id, version, content_hash, title, location, department, cleaned_text, valid_from, is_current)
                    values (%s,1,%s,%s,%s,%s,%s,%s,true)""",
@@ -91,7 +100,8 @@ def apply_board(conn: psycopg.Connection, run_id: uuid.UUID, company_id: int,
                 _new_version(conn, posting_id, digest, raw, cleaned, now)
                 totals.postings_changed += 1
             else:
-                conn.execute("update postings set last_seen_at=%s, miss_count=0 where id=%s", (now, posting_id))
+                conn.execute("update postings set last_seen_at=%s, miss_count=0, source_updated_at=%s where id=%s",
+                             (now, raw.source_updated_at, posting_id))
         totals.postings_seen += 1
 
     # Closure: absent from this successful fetch -> miss_count + 1; close at 2.
@@ -164,8 +174,18 @@ def run_pipeline(conn: psycopg.Connection, fetchers: dict | None = None) -> tupl
     companies = conn.execute("select id, name, ats_type, board_token from companies where active order by id").fetchall()
     for company_id, name, ats_type, token in companies:
         now = _now()
+        known = None
+        if ats_type == "greenhouse":
+            rows = conn.execute(
+                """select p.source_posting_id, v.title, p.source_updated_at from postings p
+                   join posting_versions v on v.posting_id = p.id and v.is_current
+                   where p.company_id = %s""", (company_id,)).fetchall()
+            known = {r[0]: (r[1], r[2]) for r in rows}
         try:
-            fetch = fetchers[ats_type](token)
+            try:
+                fetch = fetchers[ats_type](token, known=known)
+            except TypeError:
+                fetch = fetchers[ats_type](token)
         except BoardError as exc:
             conn.execute(
                 "insert into company_runs (run_id, company_id, outcome, http_status, error) values (%s,%s,'error',%s,%s)",
@@ -199,6 +219,7 @@ def run_pipeline(conn: psycopg.Connection, fetchers: dict | None = None) -> tupl
             "listed": fetch.postings_listed, "kept": fetch.postings_kept,
             "stored": len(fetch.postings),
             "keep_rate": round(fetch.postings_kept / fetch.postings_listed, 4) if fetch.postings_listed else None,
+            "content_fetches_skipped": getattr(fetch, "content_fetches_skipped", 0),
         })
 
     size = database_size_bytes(conn)
