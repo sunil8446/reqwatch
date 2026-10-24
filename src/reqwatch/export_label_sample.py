@@ -22,7 +22,7 @@ OUT = os.environ.get("REQWATCH_LABEL_OUT", "label_sample.csv")
 
 FIELDS = ["posting_id", "company", "ats", "title", "location", "cleaned_text",
           "label_skills", "label_seniority", "label_role_family",
-          "label_required_years", "label_tech_stack", "label_work_mode", "label_location"]
+          "label_required_years", "label_tech_stack", "label_work_mode", "label_location", "notes"]
 
 
 def main() -> int:
@@ -46,7 +46,7 @@ def main() -> int:
         w = csv.writer(fh)
         w.writerow(FIELDS)
         for pid, company, ats, title, location, text in picked:
-            w.writerow([pid, company, ats, title, location or "", text, "", "", "", "", "", "", ""])
+            w.writerow([pid, company, ats, title, location or "", text, "", "", "", "", "", "", "", ""])
     companies_covered = len(per_company)
     print(f"sample_rows={len(picked)} companies_covered={companies_covered} "
           f"pool={len(rows)} per_company_cap={PER_COMPANY_CAP} out={OUT}")

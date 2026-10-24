@@ -140,3 +140,11 @@ def test_ollama_provider_uses_schema_constrained_format():
     assert set(fmt["required"]) == set(fmt["properties"].keys())
     assert out.result.role_family == "data_engineering"
     assert (out.input_tokens, out.output_tokens) == (500, 60)
+
+
+def test_evalnorm_aliases_apply_at_scoring():
+    from reqwatch.evalnorm import normalize_set, normalize_term
+    assert normalize_term("Postgres") == "postgresql"
+    assert normalize_term("K8s") == "kubernetes"
+    assert normalize_term("  AWS ") == "amazon web services"
+    assert normalize_set(["PostgreSQL", "k8s", "dbt"]) == {"postgresql", "kubernetes", "dbt"}

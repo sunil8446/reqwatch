@@ -16,7 +16,8 @@ from typing import Literal, Protocol
 from pydantic import BaseModel, Field
 
 RoleFamily = Literal[
-    "data_engineering", "analytics_engineering", "data_science", "ml_ai",
+    "data_engineering", "analytics_engineering", "data_analytics",
+    "data_science", "ml_ai",
     "software_engineering", "infrastructure_devops", "other",
 ]
 Seniority = Literal["intern", "junior", "mid", "senior", "staff_plus", "leadership"]
