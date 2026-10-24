@@ -21,6 +21,8 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           REQWATCH_USER_AGENT: ${{ vars.REQWATCH_USER_AGENT }}
         run: |
+          mkdir -p bench
+          set -o pipefail
           python -m reqwatch.run_pipeline | tee bench/last_run.json
       - name: Commit run report (numbers only; also keeps the schedule alive)
         run: |
