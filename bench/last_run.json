@@ -1,1 +1,15 @@
-{"note": "placeholder until first successful pipeline run commits its report"}
+{
+  "seeded_companies": 0,
+  "run_id": "f9d5ddc2-1787-4536-9248-c29d792d827a",
+  "db_size_bytes": 8241152,
+  "db_growth_bytes": 16384,
+  "projected_months_until_1gb": 2136.43,
+  "companies_ok": 0,
+  "companies_failed": 0,
+  "postings_new": 0,
+  "postings_changed": 0,
+  "postings_closed": 0,
+  "postings_seen": 0,
+  "health_alerts": [],
+  "drift_alerts": []
+}
