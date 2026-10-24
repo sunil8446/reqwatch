@@ -62,6 +62,19 @@ create table if not exists extractions (
     unique (posting_id, version, provider, model, prompt_version)
 );
 
+create table if not exists extraction_dead_letters (
+    id             bigint generated always as identity primary key,
+    posting_id     bigint not null references postings(id),
+    version        int not null,
+    provider       text not null,
+    model          text not null,
+    prompt_version text not null,
+    error          text not null,
+    raw_output     text,
+    attempts       int not null default 2,
+    created_at     timestamptz not null default now()
+);
+
 create table if not exists users (
     id         bigint generated always as identity primary key,
     email      text not null unique,
