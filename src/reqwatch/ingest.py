@@ -38,8 +38,17 @@ class RunTotals:
     postings_changed: int = 0
     postings_closed: int = 0
     postings_seen: int = 0
+    postings_listed: int = 0
+    postings_kept: int = 0
+    per_board: list[dict] = field(default_factory=list)
     health_alerts: list[str] = field(default_factory=list)
     drift_alerts: list[str] = field(default_factory=list)
+
+    @property
+    def filter_keep_rate(self) -> float | None:
+        if self.postings_listed == 0:
+            return None
+        return round(self.postings_kept / self.postings_listed, 4)
 
 
 def _now() -> datetime:
@@ -177,9 +186,20 @@ def run_pipeline(conn: psycopg.Connection, fetchers: dict | None = None) -> tupl
         with conn.transaction():
             apply_board(conn, run_id, company_id, fetch, now, totals)
             conn.execute(
-                "insert into company_runs (run_id, company_id, outcome, http_status, postings_seen) values (%s,%s,'ok',%s,%s)",
-                (run_id, company_id, fetch.http_status, len(fetch.postings)))
+                """insert into company_runs (run_id, company_id, outcome, http_status, postings_seen,
+                   postings_listed, postings_kept, postings_stored)
+                   values (%s,%s,'ok',%s,%s,%s,%s,%s)""",
+                (run_id, company_id, fetch.http_status, len(fetch.postings),
+                 fetch.postings_listed, fetch.postings_kept, len(fetch.postings)))
         totals.companies_ok += 1
+        totals.postings_listed += fetch.postings_listed
+        totals.postings_kept += fetch.postings_kept
+        totals.per_board.append({
+            "company": name, "ats": ats_type, "board": token,
+            "listed": fetch.postings_listed, "kept": fetch.postings_kept,
+            "stored": len(fetch.postings),
+            "keep_rate": round(fetch.postings_kept / fetch.postings_listed, 4) if fetch.postings_listed else None,
+        })
 
     size = database_size_bytes(conn)
     prev = conn.execute(

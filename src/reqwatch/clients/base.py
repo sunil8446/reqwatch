@@ -26,10 +26,16 @@ class RawPosting:
 
 @dataclass
 class BoardFetch:
-    postings: list[RawPosting]
+    postings: list[RawPosting]  # KEPT postings only (title filter already applied)
     schema_hash: str
     field_names: list[str]
     http_status: int
+    postings_listed: int = 0    # every title in the list response, before filtering
+
+
+    @property
+    def postings_kept(self) -> int:
+        return len(self.postings)
 
 
 class BoardError(Exception):

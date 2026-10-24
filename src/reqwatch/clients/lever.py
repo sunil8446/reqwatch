@@ -9,6 +9,7 @@ from __future__ import annotations
 import os
 
 from ..hashing import schema_snapshot
+from ..title_filter import title_keeps
 from .base import BoardFetch, RawPosting, get_with_backoff
 
 BASE = "https://api.lever.co/v0/postings"
@@ -31,6 +32,8 @@ def fetch_board(board_token: str, *, transport=None) -> BoardFetch:
         if len(page) < PAGE:
             break
         skip += PAGE
+    listed = len(jobs)
+    jobs = [j for j in jobs if title_keeps(j.get("text", ""))]  # filter BEFORE storing
     postings = []
     for job in jobs:
         cats = job.get("categories") or {}
@@ -43,4 +46,5 @@ def fetch_board(board_token: str, *, transport=None) -> BoardFetch:
             description_raw=job.get("descriptionPlain") or job.get("description") or "",
         ))
     digest, names = schema_snapshot(jobs)
-    return BoardFetch(postings=postings, schema_hash=digest, field_names=names, http_status=status)
+    return BoardFetch(postings=postings, schema_hash=digest, field_names=names,
+                      http_status=status, postings_listed=listed)

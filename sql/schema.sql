@@ -104,9 +104,16 @@ create table if not exists company_runs (
     outcome     text not null check (outcome in ('ok','error')),
     http_status int,
     postings_seen int not null default 0,
+    -- Title-filter accounting (filter-first condition, 2026-10-24):
+    postings_listed int not null default 0,  -- titles in the list response
+    postings_kept   int not null default 0,  -- titles passing the filter
+    postings_stored int not null default 0,  -- kept postings upserted this run
     error       text,
     primary key (run_id, company_id)
 );
+alter table company_runs add column if not exists postings_listed int not null default 0;
+alter table company_runs add column if not exists postings_kept int not null default 0;
+alter table company_runs add column if not exists postings_stored int not null default 0;
 
 -- Drift detection: ONLY the sorted top-level + first-job field names and their hash.
 -- No payload is stored.

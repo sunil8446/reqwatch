@@ -18,17 +18,22 @@ SEED_PATH = Path(__file__).resolve().parents[2] / "seed" / "seed_companies.csv"
 
 
 def seed_companies(conn) -> int:
+    """Load seed rows Sunil approved. 'approved...' rows load active;
+    'approved_inactive...' rows load with active=false (board exists but
+    is not fetched, e.g. currently 0 jobs). Anything else is ignored."""
     if not SEED_PATH.exists():
         return 0
     inserted = 0
     with SEED_PATH.open() as fh:
         for row in csv.DictReader(fh):
-            if not row.get("verification_status", "").startswith("approved"):
+            status = row.get("verification_status", "")
+            if not status.startswith("approved"):
                 continue
+            active = not status.startswith("approved_inactive")
             cur = conn.execute(
-                """insert into companies (name, ats_type, board_token) values (%s,%s,%s)
-                   on conflict (ats_type, board_token) do nothing""",
-                (row["company_name"], row["ats_type"], row["board_token"]))
+                """insert into companies (name, ats_type, board_token, active) values (%s,%s,%s,%s)
+                   on conflict (ats_type, board_token) do update set active=excluded.active""",
+                (row["company_name"], row["ats_type"], row["board_token"], active))
             inserted += cur.rowcount
     conn.commit()
     return inserted
@@ -39,6 +44,7 @@ def main() -> int:
         apply_schema(conn)
         seeded = seed_companies(conn)
         run_id, totals, report = run_pipeline(conn)
+    from .title_filter import FILTER_VERSION
     print(json.dumps({
         "seeded_companies": seeded,
         **report,
@@ -48,6 +54,11 @@ def main() -> int:
         "postings_changed": totals.postings_changed,
         "postings_closed": totals.postings_closed,
         "postings_seen": totals.postings_seen,
+        "filter_version": FILTER_VERSION,
+        "postings_listed": totals.postings_listed,
+        "postings_kept_by_filter": totals.postings_kept,
+        "filter_keep_rate": totals.filter_keep_rate,
+        "per_board": sorted(totals.per_board, key=lambda b: -b["listed"]),
         "health_alerts": totals.health_alerts,
         "drift_alerts": totals.drift_alerts,
     }, indent=2))

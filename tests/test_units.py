@@ -49,23 +49,44 @@ def _mock_transport(handler):
     return httpx.MockTransport(handler)
 
 
-def test_greenhouse_client_parses_jobs():
+def test_title_filter_keeps_tech_cuts_commercial():
+    from reqwatch.title_filter import title_keeps
+    assert title_keeps("Senior Data Engineer")
+    assert title_keeps("ML Platform Engineer")
+    assert title_keeps("Site Reliability Engineer")
+    assert not title_keeps("Accountant")
+    assert not title_keeps("Account Manager, Starlink Enterprise")
+    assert not title_keeps("Additive Manufacturing Engineer (Raptor)")
+    assert not title_keeps("Financial Analyst")
+    assert not title_keeps("Product Manager, Data Platform")
+
+
+def test_greenhouse_two_stage_filter_before_content():
+    content_calls = []
     def handler(request):
-        assert "content=true" in str(request.url)
-        return httpx.Response(200, json={"jobs": [
-            {"id": 42, "title": "Data Engineer", "location": {"name": "Remote - US"},
-             "departments": [{"name": "Data"}], "content": "&lt;p&gt;Hello&lt;/p&gt;"}]})
+        url = str(request.url)
+        if url.endswith("/jobs"):
+            return httpx.Response(200, json={"jobs": [
+                {"id": 42, "title": "Data Engineer", "location": {"name": "Remote - US"},
+                 "departments": [{"name": "Data"}]},
+                {"id": 43, "title": "Accountant", "location": {"name": "NYC"},
+                 "departments": [{"name": "Finance"}]}]})
+        content_calls.append(url)
+        return httpx.Response(200, json={
+            "id": 42, "title": "Data Engineer", "location": {"name": "Remote - US"},
+            "departments": [{"name": "Data"}], "content": "&lt;p&gt;Hello&lt;/p&gt;"})
     fetch = greenhouse.fetch_board("acme", transport=_mock_transport(handler))
+    assert fetch.postings_listed == 2
     assert len(fetch.postings) == 1
     assert fetch.postings[0].source_posting_id == "42"
-    assert fetch.postings[0].department == "Data"
+    assert len(content_calls) == 1 and content_calls[0].endswith("/jobs/42")
 
 
 def test_lever_client_paginates_and_prefers_plain_text():
     pages = {
-        0: [{"id": f"id-{i}", "text": "Eng", "categories": {"location": "NYC", "department": "Eng"},
+        0: [{"id": f"id-{i}", "text": "Software Engineer", "categories": {"location": "NYC", "department": "Eng"},
              "descriptionPlain": "plain", "description": "<p>html</p>"} for i in range(100)],
-        100: [{"id": "id-100", "text": "Eng", "categories": {}, "descriptionPlain": "last"}],
+        100: [{"id": "id-100", "text": "Software Engineer", "categories": {}, "descriptionPlain": "last"}],
     }
     def handler(request):
         skip = int(request.url.params.get("skip", "0"))

@@ -1,151 +1,151 @@
 company_name,ats_type,board_token,sector,verification_status
-Abnormal Security,ashby,abnormalsecurity,tech,sweep_drop_as_listed_alt_found_greenhouse_86_jobs
-Airbyte,ashby,airbyte,data_ai,sweep_keep_13_jobs
-Alpaca,ashby,alpaca,fintech,sweep_drop_as_listed_alt_found_greenhouse_69_jobs
-Anthropic,ashby,anthropic,data_ai,sweep_drop_as_listed_alt_found_greenhouse_681_jobs
-Benchling,ashby,benchling,tech,sweep_keep_56_jobs
-Cockroach Labs,ashby,cockroachlabs,data_ai,sweep_drop_as_listed_alt_found_greenhouse_15_jobs
-Cohere,ashby,cohere,data_ai,sweep_keep_116_jobs
-Cohere Health,ashby,coherehealth,data_ai,sweep_drop_as_listed_alt_found_greenhouse_75_jobs
-Cursor Anysphere,ashby,anysphere,data_ai,sweep_drop_no_board_found
-Deepl,ashby,deepl,data_ai,sweep_keep_9_jobs
-Drata,ashby,drata,tech,sweep_keep_33_jobs
-ElevenLabs,ashby,elevenlabs,data_ai,sweep_keep_159_jobs
-Fivetran,ashby,fivetran,data_ai,sweep_drop_as_listed_alt_found_greenhouse_171_jobs
-Glean,ashby,glean,data_ai,sweep_drop_no_board_found
-Grafana Labs,ashby,grafanalabs,tech,sweep_drop_as_listed_alt_found_greenhouse_145_jobs
-Harvey,ashby,harvey,data_ai,sweep_keep_358_jobs
-Hex,ashby,hex,data_ai,sweep_keep_39_jobs
-Hugging Face,ashby,huggingface,data_ai,sweep_drop_no_board_found
-Island,ashby,island,tech,sweep_drop_as_listed_alt_found_greenhouse_34_jobs
-LangChain,ashby,langchain,data_ai,sweep_keep_104_jobs
-Linear,ashby,linear,tech,sweep_keep_34_jobs
-Lithic,ashby,lithic,fintech,sweep_drop_as_listed_alt_found_greenhouse_11_jobs
-Mercor,ashby,mercor,data_ai,sweep_keep_112_jobs
-Midjourney,ashby,midjourney,data_ai,sweep_keep_17_jobs
-Mistral AI,ashby,mistral,data_ai,sweep_drop_no_board_found
-Mode,ashby,mode,data_ai,sweep_drop_no_board_found
-Modern Treasury,ashby,moderntreasury,fintech,sweep_keep_9_jobs
-Notion Labs Ashby alt,ashby,notionlabs,tech,sweep_drop_no_board_found
-OpenAI,ashby,openai,data_ai,sweep_keep_796_jobs
-Perplexity,ashby,perplexity,data_ai,sweep_keep_132_jobs
-Pinecone,ashby,pinecone,data_ai,sweep_keep_8_jobs
-Polymarket,ashby,polymarket,fintech,sweep_keep_40_jobs
-Posthog,ashby,posthog,data_ai,sweep_keep_10_jobs
-Ramp,ashby,ramp,fintech,sweep_keep_167_jobs
-Raycast,ashby,raycast,tech,sweep_keep_empty_0_jobs
-Replit,ashby,replit,tech,sweep_keep_37_jobs
-Retool,ashby,retool,tech,sweep_drop_no_board_found
-Runway,ashby,runway,data_ai,sweep_keep_3_jobs
-Scale AI,ashby,scaleai,data_ai,sweep_drop_as_listed_alt_found_greenhouse_171_jobs
-Sentry,ashby,sentry,tech,sweep_keep_43_jobs
-Synthesia,ashby,synthesia,data_ai,sweep_keep_34_jobs
-Temporal,ashby,temporal,tech,sweep_keep_71_jobs
-Unit,ashby,unit,fintech,sweep_keep_2_jobs
-Vanta,ashby,vanta,tech,sweep_keep_83_jobs
-Vercel,ashby,vercel,tech,sweep_keep_empty_0_jobs
-Watershed,ashby,watershed,tech,sweep_keep_39_jobs
-Weaviate,ashby,weaviate,data_ai,sweep_keep_2_jobs
-Weights & Biases,ashby,wandb,data_ai,sweep_drop_no_board_found
-Wiz,ashby,wiz,tech,sweep_keep_empty_0_jobs
-dbt Labs,ashby,dbtlabs,data_ai,sweep_drop_no_board_found
-Adyen,greenhouse,adyen,fintech,sweep_keep_248_jobs
-Affirm,greenhouse,affirm,fintech,sweep_keep_225_jobs
-Airbnb,greenhouse,airbnb,tech,sweep_keep_191_jobs
-Airtable,greenhouse,airtable,data_ai,sweep_keep_4_jobs
-Asana,greenhouse,asana,tech,sweep_keep_109_jobs
-Block,greenhouse,block,fintech,sweep_keep_208_jobs
-Brex,greenhouse,brex,fintech,sweep_keep_254_jobs
-Checkout.com,greenhouse,checkout,fintech,sweep_drop_no_board_found
-Chime,greenhouse,chime,fintech,sweep_keep_73_jobs
-Circle,greenhouse,circle,fintech,sweep_drop_as_listed_alt_found_ashby_10_jobs
-Cloudflare,greenhouse,cloudflare,tech,sweep_keep_454_jobs
-Coinbase,greenhouse,coinbase,fintech,sweep_keep_227_jobs
-Confluent,greenhouse,confluent,data_ai,sweep_drop_no_board_found
-Coursera,greenhouse,coursera,tech,sweep_keep_31_jobs
-Databricks,greenhouse,databricks,data_ai,sweep_keep_896_jobs
-Datadog,greenhouse,datadog,tech,sweep_keep_433_jobs
-Deel,greenhouse,deel,tech,sweep_drop_no_board_found
-Discord,greenhouse,discord,tech,sweep_keep_46_jobs
-Doordash,greenhouse,doordash,tech,sweep_drop_no_board_found
-Dropbox,greenhouse,dropbox,tech,sweep_keep_23_jobs
-Duolingo,greenhouse,duolingo,tech,sweep_keep_60_jobs
-Elastic,greenhouse,elastic,data_ai,sweep_keep_402_jobs
-Figma,greenhouse,figma,tech,sweep_keep_138_jobs
-Gemini,greenhouse,gemini,fintech,sweep_keep_30_jobs
-GitLab,greenhouse,gitlab,tech,sweep_keep_239_jobs
-Gusto,greenhouse,gusto,tech,sweep_keep_101_jobs
-HashiCorp,greenhouse,hashicorp,tech,sweep_drop_no_board_found
-HubSpot,greenhouse,hubspot,tech,sweep_drop_no_board_found
-Instacart,greenhouse,instacart,tech,sweep_keep_113_jobs
-Khan Academy,greenhouse,khanacademy,tech,sweep_keep_5_jobs
-Klarna,greenhouse,klarna,fintech,sweep_drop_no_board_found
-Kraken,greenhouse,kraken,fintech,sweep_drop_no_board_found
-Lyft,greenhouse,lyft,tech,sweep_keep_181_jobs
-Marqeta,greenhouse,marqeta,fintech,sweep_drop_no_board_found
-Mercury,greenhouse,mercury,fintech,sweep_keep_77_jobs
-MongoDB,greenhouse,mongodb,data_ai,sweep_keep_382_jobs
-N26,greenhouse,n26,fintech,sweep_keep_39_jobs
-Notion,greenhouse,notion,tech,sweep_drop_as_listed_alt_found_ashby_140_jobs
-Okta,greenhouse,okta,tech,sweep_keep_390_jobs
-PagerDuty,greenhouse,pagerduty,tech,sweep_keep_50_jobs
-Pinterest,greenhouse,pinterest,tech,sweep_keep_163_jobs
-Plaid,greenhouse,plaid,fintech,sweep_drop_as_listed_alt_found_ashby_135_jobs
-Reddit,greenhouse,reddit,tech,sweep_keep_160_jobs
-Remote,greenhouse,remote,tech,sweep_keep_2_jobs
-Revolut,greenhouse,revolut,fintech,sweep_drop_no_board_found
-Rippling,greenhouse,rippling,tech,sweep_drop_no_board_found
-Robinhood,greenhouse,robinhood,fintech,sweep_keep_157_jobs
-Snowflake,greenhouse,snowflake,data_ai,sweep_drop_as_listed_alt_found_ashby_355_jobs
-SoFi,greenhouse,sofi,fintech,sweep_keep_57_jobs
-Sourcegraph,greenhouse,sourcegraph,tech,sweep_drop_no_board_found
-Stripe,greenhouse,stripe,fintech,sweep_keep_719_jobs
-Twilio,greenhouse,twilio,tech,sweep_keep_134_jobs
-Webflow,greenhouse,webflow,tech,sweep_keep_empty_0_jobs
-Wise,greenhouse,wise,fintech,sweep_keep_21_jobs
-Zendesk,greenhouse,zendesk,tech,sweep_drop_no_board_found
-Alan,lever,alan,tech,sweep_drop_as_listed_alt_found_ashby_130_jobs
-Alation,lever,alation,data_ai,sweep_drop_no_board_found
-Algolia,lever,algolia,data_ai,sweep_drop_as_listed_alt_found_greenhouse_28_jobs
-Anduril,lever,anduril,tech,sweep_drop_no_board_found
-Astronomer,lever,astronomer,data_ai,sweep_drop_as_listed_alt_found_ashby_18_jobs
-Atlan,lever,atlan,data_ai,sweep_drop_as_listed_alt_found_ashby_6_jobs
-Atlassian,lever,atlassian,tech,sweep_drop_no_board_found
-Better Mortgage,lever,better,fintech,sweep_keep_empty_0_jobs
-Blend,lever,blend,fintech,sweep_drop_as_listed_alt_found_greenhouse_15_jobs
-Canva,lever,canva,tech,sweep_drop_no_board_found
-ClickHouse,lever,clickhouse,data_ai,sweep_drop_as_listed_alt_found_ashby_203_jobs
-Collibra,lever,collibra,data_ai,sweep_drop_as_listed_alt_found_greenhouse_26_jobs
-Contentful,lever,contentful,tech,sweep_drop_as_listed_alt_found_greenhouse_24_jobs
-Dataiku,lever,dataiku,data_ai,sweep_drop_as_listed_alt_found_greenhouse_13_jobs
-Doctolib,lever,doctolib,tech,sweep_drop_as_listed_alt_found_greenhouse_156_jobs
-DuckDB Labs,lever,duckdblabs,data_ai,sweep_drop_no_board_found
-Etsy,lever,etsy,tech,sweep_drop_no_board_found
-Glassdoor,lever,glassdoor,tech,sweep_drop_no_board_found
-Great Expectations,lever,greatexpectations,data_ai,sweep_drop_no_board_found
-Indeed,lever,indeed,tech,sweep_drop_no_board_found
-LendingClub,lever,lendingclub,fintech,sweep_drop_no_board_found
-Looker Alt,lever,looker,tech,sweep_drop_no_board_found
-Monte Carlo,lever,montecarlo,data_ai,sweep_drop_no_board_found
-MotherDuck,lever,motherduck,data_ai,sweep_drop_as_listed_alt_found_ashby_3_jobs
-Netflix,lever,netflix,tech,sweep_drop_no_board_found
-Nu Bank,lever,nubank,fintech,sweep_drop_as_listed_alt_found_ashby_97_jobs
-Opendoor,lever,opendoor,fintech,sweep_drop_no_board_found
-Palantir,lever,palantir,data_ai,sweep_keep_309_jobs
-Prefect,lever,prefect,data_ai,sweep_drop_as_listed_alt_found_ashby_8_jobs
-Qonto,lever,qonto,fintech,sweep_keep_empty_0_jobs
-Redfin,lever,redfin,tech,sweep_drop_no_board_found
-Salesforce Alt,lever,salesforce,tech,sweep_drop_no_board_found
-ServiceNow Alt,lever,servicenow,tech,sweep_drop_no_board_found
-Shopify,lever,shopify,tech,sweep_drop_no_board_found
-SingleStore,lever,singlestore,data_ai,sweep_drop_as_listed_alt_found_greenhouse_39_jobs
-Slack Alt,lever,slack,tech,sweep_drop_no_board_found
-SpaceX,lever,spacex,tech,sweep_drop_as_listed_alt_found_greenhouse_2820_jobs
-Spotify,lever,spotify,tech,sweep_keep_90_jobs
-ThoughtSpot,lever,thoughtspot,data_ai,sweep_drop_no_board_found
-Twitch,lever,twitch,tech,sweep_drop_as_listed_alt_found_greenhouse_58_jobs
-Upstart,lever,upstart,fintech,sweep_drop_as_listed_alt_found_greenhouse_87_jobs
-Workday Alt,lever,workday,tech,sweep_drop_no_board_found
-Zillow,lever,zillow,tech,sweep_drop_no_board_found
-Zoom,lever,zoom,tech,sweep_drop_no_board_found
-eBay Alt,lever,ebay,tech,sweep_drop_no_board_found
+Abnormal Security,greenhouse,abnormalsecurity,tech,approved_reassigned_from_ashby_sweep_2026-10-24
+Airbyte,ashby,airbyte,data_ai,approved_keep_13_jobs_sweep_2026-10-24
+Alpaca,greenhouse,alpaca,fintech,approved_reassigned_from_ashby_sweep_2026-10-24
+Anthropic,greenhouse,anthropic,data_ai,approved_reassigned_from_ashby_sweep_2026-10-24
+Benchling,ashby,benchling,tech,approved_keep_56_jobs_sweep_2026-10-24
+Cockroach Labs,greenhouse,cockroachlabs,data_ai,approved_reassigned_from_ashby_sweep_2026-10-24
+Cohere,ashby,cohere,data_ai,approved_keep_116_jobs_sweep_2026-10-24
+Cohere Health,greenhouse,coherehealth,data_ai,approved_reassigned_from_ashby_sweep_2026-10-24
+Cursor Anysphere,ashby,anysphere,data_ai,dropped_no_board_found_sweep_2026-10-24
+Deepl,ashby,deepl,data_ai,approved_keep_9_jobs_sweep_2026-10-24
+Drata,ashby,drata,tech,approved_keep_33_jobs_sweep_2026-10-24
+ElevenLabs,ashby,elevenlabs,data_ai,approved_keep_159_jobs_sweep_2026-10-24
+Fivetran,greenhouse,fivetran,data_ai,approved_reassigned_from_ashby_sweep_2026-10-24
+Glean,ashby,glean,data_ai,dropped_no_board_found_sweep_2026-10-24
+Grafana Labs,greenhouse,grafanalabs,tech,approved_reassigned_from_ashby_sweep_2026-10-24
+Harvey,ashby,harvey,data_ai,approved_keep_358_jobs_sweep_2026-10-24
+Hex,ashby,hex,data_ai,approved_keep_39_jobs_sweep_2026-10-24
+Hugging Face,ashby,huggingface,data_ai,dropped_no_board_found_sweep_2026-10-24
+Island,greenhouse,island,tech,approved_reassigned_from_ashby_sweep_2026-10-24
+LangChain,ashby,langchain,data_ai,approved_keep_104_jobs_sweep_2026-10-24
+Linear,ashby,linear,tech,approved_keep_34_jobs_sweep_2026-10-24
+Lithic,greenhouse,lithic,fintech,approved_reassigned_from_ashby_sweep_2026-10-24
+Mercor,ashby,mercor,data_ai,approved_keep_112_jobs_sweep_2026-10-24
+Midjourney,ashby,midjourney,data_ai,approved_keep_17_jobs_sweep_2026-10-24
+Mistral AI,ashby,mistral,data_ai,dropped_no_board_found_sweep_2026-10-24
+Mode,ashby,mode,data_ai,dropped_no_board_found_sweep_2026-10-24
+Modern Treasury,ashby,moderntreasury,fintech,approved_keep_9_jobs_sweep_2026-10-24
+Notion Labs Ashby alt,ashby,notionlabs,tech,dropped_no_board_found_sweep_2026-10-24
+OpenAI,ashby,openai,data_ai,approved_keep_796_jobs_sweep_2026-10-24
+Perplexity,ashby,perplexity,data_ai,approved_keep_132_jobs_sweep_2026-10-24
+Pinecone,ashby,pinecone,data_ai,approved_keep_8_jobs_sweep_2026-10-24
+Polymarket,ashby,polymarket,fintech,approved_keep_40_jobs_sweep_2026-10-24
+Posthog,ashby,posthog,data_ai,approved_keep_10_jobs_sweep_2026-10-24
+Ramp,ashby,ramp,fintech,approved_keep_167_jobs_sweep_2026-10-24
+Raycast,ashby,raycast,tech,approved_inactive_board_exists_0_jobs_sweep_2026-10-24
+Replit,ashby,replit,tech,approved_keep_37_jobs_sweep_2026-10-24
+Retool,ashby,retool,tech,dropped_no_board_found_sweep_2026-10-24
+Runway,ashby,runway,data_ai,approved_keep_3_jobs_sweep_2026-10-24
+Scale AI,greenhouse,scaleai,data_ai,approved_reassigned_from_ashby_sweep_2026-10-24
+Sentry,ashby,sentry,tech,approved_keep_43_jobs_sweep_2026-10-24
+Synthesia,ashby,synthesia,data_ai,approved_keep_34_jobs_sweep_2026-10-24
+Temporal,ashby,temporal,tech,approved_keep_71_jobs_sweep_2026-10-24
+Unit,ashby,unit,fintech,approved_keep_2_jobs_sweep_2026-10-24
+Vanta,ashby,vanta,tech,approved_keep_83_jobs_sweep_2026-10-24
+Vercel,ashby,vercel,tech,approved_inactive_board_exists_0_jobs_sweep_2026-10-24
+Watershed,ashby,watershed,tech,approved_keep_39_jobs_sweep_2026-10-24
+Weaviate,ashby,weaviate,data_ai,approved_keep_2_jobs_sweep_2026-10-24
+Weights & Biases,ashby,wandb,data_ai,dropped_no_board_found_sweep_2026-10-24
+Wiz,ashby,wiz,tech,approved_inactive_board_exists_0_jobs_sweep_2026-10-24
+dbt Labs,ashby,dbtlabs,data_ai,dropped_no_board_found_sweep_2026-10-24
+Adyen,greenhouse,adyen,fintech,approved_keep_248_jobs_sweep_2026-10-24
+Affirm,greenhouse,affirm,fintech,approved_keep_225_jobs_sweep_2026-10-24
+Airbnb,greenhouse,airbnb,tech,approved_keep_191_jobs_sweep_2026-10-24
+Airtable,greenhouse,airtable,data_ai,approved_keep_4_jobs_sweep_2026-10-24
+Asana,greenhouse,asana,tech,approved_keep_109_jobs_sweep_2026-10-24
+Block,greenhouse,block,fintech,approved_keep_208_jobs_sweep_2026-10-24
+Brex,greenhouse,brex,fintech,approved_keep_254_jobs_sweep_2026-10-24
+Checkout.com,greenhouse,checkout,fintech,dropped_no_board_found_sweep_2026-10-24
+Chime,greenhouse,chime,fintech,approved_keep_73_jobs_sweep_2026-10-24
+Circle,ashby,circle,fintech,approved_reassigned_from_greenhouse_sweep_2026-10-24
+Cloudflare,greenhouse,cloudflare,tech,approved_keep_454_jobs_sweep_2026-10-24
+Coinbase,greenhouse,coinbase,fintech,approved_keep_227_jobs_sweep_2026-10-24
+Confluent,greenhouse,confluent,data_ai,dropped_no_board_found_sweep_2026-10-24
+Coursera,greenhouse,coursera,tech,approved_keep_31_jobs_sweep_2026-10-24
+Databricks,greenhouse,databricks,data_ai,approved_keep_896_jobs_sweep_2026-10-24
+Datadog,greenhouse,datadog,tech,approved_keep_433_jobs_sweep_2026-10-24
+Deel,greenhouse,deel,tech,dropped_no_board_found_sweep_2026-10-24
+Discord,greenhouse,discord,tech,approved_keep_46_jobs_sweep_2026-10-24
+Doordash,greenhouse,doordash,tech,dropped_no_board_found_sweep_2026-10-24
+Dropbox,greenhouse,dropbox,tech,approved_keep_23_jobs_sweep_2026-10-24
+Duolingo,greenhouse,duolingo,tech,approved_keep_60_jobs_sweep_2026-10-24
+Elastic,greenhouse,elastic,data_ai,approved_keep_402_jobs_sweep_2026-10-24
+Figma,greenhouse,figma,tech,approved_keep_138_jobs_sweep_2026-10-24
+Gemini,greenhouse,gemini,fintech,approved_keep_30_jobs_sweep_2026-10-24
+GitLab,greenhouse,gitlab,tech,approved_keep_239_jobs_sweep_2026-10-24
+Gusto,greenhouse,gusto,tech,approved_keep_101_jobs_sweep_2026-10-24
+HashiCorp,greenhouse,hashicorp,tech,dropped_no_board_found_sweep_2026-10-24
+HubSpot,greenhouse,hubspot,tech,dropped_no_board_found_sweep_2026-10-24
+Instacart,greenhouse,instacart,tech,approved_keep_113_jobs_sweep_2026-10-24
+Khan Academy,greenhouse,khanacademy,tech,approved_keep_5_jobs_sweep_2026-10-24
+Klarna,greenhouse,klarna,fintech,dropped_no_board_found_sweep_2026-10-24
+Kraken,greenhouse,kraken,fintech,dropped_no_board_found_sweep_2026-10-24
+Lyft,greenhouse,lyft,tech,approved_keep_181_jobs_sweep_2026-10-24
+Marqeta,greenhouse,marqeta,fintech,dropped_no_board_found_sweep_2026-10-24
+Mercury,greenhouse,mercury,fintech,approved_keep_77_jobs_sweep_2026-10-24
+MongoDB,greenhouse,mongodb,data_ai,approved_keep_382_jobs_sweep_2026-10-24
+N26,greenhouse,n26,fintech,approved_keep_39_jobs_sweep_2026-10-24
+Notion,ashby,notion,tech,approved_reassigned_from_greenhouse_sweep_2026-10-24
+Okta,greenhouse,okta,tech,approved_keep_390_jobs_sweep_2026-10-24
+PagerDuty,greenhouse,pagerduty,tech,approved_keep_50_jobs_sweep_2026-10-24
+Pinterest,greenhouse,pinterest,tech,approved_keep_163_jobs_sweep_2026-10-24
+Plaid,ashby,plaid,fintech,approved_reassigned_from_greenhouse_sweep_2026-10-24
+Reddit,greenhouse,reddit,tech,approved_keep_160_jobs_sweep_2026-10-24
+Remote,greenhouse,remote,tech,approved_keep_2_jobs_sweep_2026-10-24
+Revolut,greenhouse,revolut,fintech,dropped_no_board_found_sweep_2026-10-24
+Rippling,greenhouse,rippling,tech,dropped_no_board_found_sweep_2026-10-24
+Robinhood,greenhouse,robinhood,fintech,approved_keep_157_jobs_sweep_2026-10-24
+Snowflake,ashby,snowflake,data_ai,approved_reassigned_from_greenhouse_sweep_2026-10-24
+SoFi,greenhouse,sofi,fintech,approved_keep_57_jobs_sweep_2026-10-24
+Sourcegraph,greenhouse,sourcegraph,tech,dropped_no_board_found_sweep_2026-10-24
+Stripe,greenhouse,stripe,fintech,approved_keep_719_jobs_sweep_2026-10-24
+Twilio,greenhouse,twilio,tech,approved_keep_134_jobs_sweep_2026-10-24
+Webflow,greenhouse,webflow,tech,approved_inactive_board_exists_0_jobs_sweep_2026-10-24
+Wise,greenhouse,wise,fintech,approved_keep_21_jobs_sweep_2026-10-24
+Zendesk,greenhouse,zendesk,tech,dropped_no_board_found_sweep_2026-10-24
+Alan,ashby,alan,tech,approved_reassigned_from_lever_sweep_2026-10-24
+Alation,lever,alation,data_ai,dropped_no_board_found_sweep_2026-10-24
+Algolia,greenhouse,algolia,data_ai,approved_reassigned_from_lever_sweep_2026-10-24
+Anduril,lever,anduril,tech,dropped_no_board_found_sweep_2026-10-24
+Astronomer,ashby,astronomer,data_ai,approved_reassigned_from_lever_sweep_2026-10-24
+Atlan,ashby,atlan,data_ai,approved_reassigned_from_lever_sweep_2026-10-24
+Atlassian,lever,atlassian,tech,dropped_no_board_found_sweep_2026-10-24
+Better Mortgage,lever,better,fintech,approved_inactive_board_exists_0_jobs_sweep_2026-10-24
+Blend,greenhouse,blend,fintech,approved_reassigned_from_lever_sweep_2026-10-24
+Canva,lever,canva,tech,dropped_no_board_found_sweep_2026-10-24
+ClickHouse,ashby,clickhouse,data_ai,approved_reassigned_from_lever_sweep_2026-10-24
+Collibra,greenhouse,collibra,data_ai,approved_reassigned_from_lever_sweep_2026-10-24
+Contentful,greenhouse,contentful,tech,approved_reassigned_from_lever_sweep_2026-10-24
+Dataiku,greenhouse,dataiku,data_ai,approved_reassigned_from_lever_sweep_2026-10-24
+Doctolib,greenhouse,doctolib,tech,approved_reassigned_from_lever_sweep_2026-10-24
+DuckDB Labs,lever,duckdblabs,data_ai,dropped_no_board_found_sweep_2026-10-24
+Etsy,lever,etsy,tech,dropped_no_board_found_sweep_2026-10-24
+Glassdoor,lever,glassdoor,tech,dropped_no_board_found_sweep_2026-10-24
+Great Expectations,lever,greatexpectations,data_ai,dropped_no_board_found_sweep_2026-10-24
+Indeed,lever,indeed,tech,dropped_no_board_found_sweep_2026-10-24
+LendingClub,lever,lendingclub,fintech,dropped_no_board_found_sweep_2026-10-24
+Looker Alt,lever,looker,tech,dropped_no_board_found_sweep_2026-10-24
+Monte Carlo,lever,montecarlo,data_ai,dropped_no_board_found_sweep_2026-10-24
+MotherDuck,ashby,motherduck,data_ai,approved_reassigned_from_lever_sweep_2026-10-24
+Netflix,lever,netflix,tech,dropped_no_board_found_sweep_2026-10-24
+Nu Bank,ashby,nubank,fintech,approved_reassigned_from_lever_sweep_2026-10-24
+Opendoor,lever,opendoor,fintech,dropped_no_board_found_sweep_2026-10-24
+Palantir,lever,palantir,data_ai,approved_keep_309_jobs_sweep_2026-10-24
+Prefect,ashby,prefect,data_ai,approved_reassigned_from_lever_sweep_2026-10-24
+Qonto,lever,qonto,fintech,approved_inactive_board_exists_0_jobs_sweep_2026-10-24
+Redfin,lever,redfin,tech,dropped_no_board_found_sweep_2026-10-24
+Salesforce Alt,lever,salesforce,tech,dropped_no_board_found_sweep_2026-10-24
+ServiceNow Alt,lever,servicenow,tech,dropped_no_board_found_sweep_2026-10-24
+Shopify,lever,shopify,tech,dropped_no_board_found_sweep_2026-10-24
+SingleStore,greenhouse,singlestore,data_ai,approved_reassigned_from_lever_sweep_2026-10-24
+Slack Alt,lever,slack,tech,dropped_no_board_found_sweep_2026-10-24
+SpaceX,greenhouse,spacex,tech,approved_reassigned_from_lever_sweep_2026-10-24
+Spotify,lever,spotify,tech,approved_keep_90_jobs_sweep_2026-10-24
+ThoughtSpot,lever,thoughtspot,data_ai,dropped_no_board_found_sweep_2026-10-24
+Twitch,greenhouse,twitch,tech,approved_reassigned_from_lever_sweep_2026-10-24
+Upstart,greenhouse,upstart,fintech,approved_reassigned_from_lever_sweep_2026-10-24
+Workday Alt,lever,workday,tech,dropped_no_board_found_sweep_2026-10-24
+Zillow,lever,zillow,tech,dropped_no_board_found_sweep_2026-10-24
+Zoom,lever,zoom,tech,dropped_no_board_found_sweep_2026-10-24
+eBay Alt,lever,ebay,tech,dropped_no_board_found_sweep_2026-10-24
