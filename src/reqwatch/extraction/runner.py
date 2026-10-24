@@ -46,8 +46,14 @@ class ExtractionRunTotals:
 
 
 def pending_postings(conn: psycopg.Connection, provider: ExtractionProvider,
-                     *, limit: int | None = None, posting_ids: list[int] | None = None):
-    """Current versions lacking an extraction for this provider/model/prompt."""
+                     *, limit: int | None = None, posting_ids: list[int] | None = None,
+                     priority_recent_days: int | None = None):
+    """Current versions lacking an extraction for this provider/model/prompt.
+
+    Backfill plan (docs/backfill-plan.md): with priority_recent_days set,
+    postings first seen within that window come first, newest first;
+    the remainder follows. Idempotency makes any interruption resumable.
+    """
     q = """
         select pv.posting_id, pv.version, pv.cleaned_text
         from posting_versions pv
@@ -62,7 +68,10 @@ def pending_postings(conn: psycopg.Connection, provider: ExtractionProvider,
     if posting_ids:
         q += " and pv.posting_id = any(%s)"
         params.append(posting_ids)
-    q += " order by pv.posting_id"
+    if priority_recent_days is not None:
+        q += f" order by (p.first_seen_at >= now() - interval '{int(priority_recent_days)} days') desc, p.first_seen_at desc"
+    else:
+        q += " order by pv.posting_id"
     if limit:
         q += " limit %s"
         params.append(limit)
@@ -119,10 +128,12 @@ def extract_one(conn, provider: ExtractionProvider, posting_id: int, version: in
 
 
 def run_extraction(conn: psycopg.Connection, provider: ExtractionProvider,
-                   *, limit: int | None = None, posting_ids: list[int] | None = None) -> ExtractionRunTotals:
+                   *, limit: int | None = None, posting_ids: list[int] | None = None,
+                   priority_recent_days: int | None = None) -> ExtractionRunTotals:
     totals = ExtractionRunTotals()
     totals.skipped_already_extracted = already_extracted_count(conn, provider)
-    rows = pending_postings(conn, provider, limit=limit, posting_ids=posting_ids)
+    rows = pending_postings(conn, provider, limit=limit, posting_ids=posting_ids,
+                            priority_recent_days=priority_recent_days)
     totals.considered = len(rows)
     for posting_id, version, cleaned_text in rows:
         extract_one(conn, provider, posting_id, version, cleaned_text, totals)

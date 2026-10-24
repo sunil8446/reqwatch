@@ -116,3 +116,27 @@ def test_greenhouse_skips_content_fetch_when_unchanged():
     by_id = {p.source_posting_id: p for p in fetch.postings}
     assert by_id["1"].unchanged and by_id["1"].source_updated_at == "2026-10-20T00:00:00Z"
     assert not by_id["2"].unchanged
+
+
+def test_ollama_provider_uses_schema_constrained_format():
+    import json as _json
+    import httpx as _httpx
+    from reqwatch.providers.ollama import OllamaProvider, format_schema
+
+    captured = {}
+    def handler(request):
+        captured.update(_json.loads(request.content))
+        return _httpx.Response(200, json={
+            "message": {"content": _json.dumps({
+                "skills": ["Python"], "seniority": "senior",
+                "role_family": "data_engineering", "required_years": 5,
+                "tech_stack": ["dbt"], "work_mode": "remote", "location": "NYC"})},
+            "prompt_eval_count": 500, "eval_count": 60})
+    provider = OllamaProvider("qwen2.5:3b", transport=_httpx.MockTransport(handler))
+    out = provider.extract("posting body")
+    fmt = captured["format"]
+    assert isinstance(fmt, dict) and fmt == format_schema()
+    assert fmt["additionalProperties"] is False
+    assert set(fmt["required"]) == set(fmt["properties"].keys())
+    assert out.result.role_family == "data_engineering"
+    assert (out.input_tokens, out.output_tokens) == (500, 60)

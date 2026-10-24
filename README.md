@@ -50,6 +50,11 @@ latency is measured and reported separately (see `docs/slo.md`).
 4. Review `seed/seed_companies.csv`: only rows whose `verification_status`
    starts with `approved` are loaded. Edit after the sweep report.
 
+Seed verification sweep (2026-10-24): **98 of 150 boards verified** and
+loaded active (67 on the ATS as listed + 31 found on another ATS and
+reassigned); 6 boards verified real but currently listing 0 jobs (loaded
+inactive); 46 not found on Greenhouse/Lever/Ashby (dropped).
+
 ## Tests
 `python -m pytest -q` — unit tests plus an integration suite that runs the
 full pipeline twice against a throwaway Postgres to prove idempotency,

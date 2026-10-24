@@ -1,0 +1,14 @@
+{
+  "script": "bench/measure_extraction_speed.py",
+  "date": "2026-10-24",
+  "machine": "Muse VM, 2 CPU, 7 GB RAM, CPU-only",
+  "model": "qwen2.5:3b (Q4_K_M GGUF via Ollama 0.40.11)",
+  "prompt_version": "extract-v1",
+  "postings_measured": 5,
+  "source": "live Stripe Greenhouse board, title-filter kept postings",
+  "valid_json_first_attempt": 4,
+  "mean_seconds": 44.65,
+  "median_seconds": 36.45,
+  "input_tokens_range": [726, 1137],
+  "failure_mode": "role_family outside the schema vocabulary (AR Analyst posting)"
+}

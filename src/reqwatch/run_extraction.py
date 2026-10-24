@@ -17,10 +17,11 @@ from .providers.ollama import OllamaProvider
 def main() -> int:
     model = os.environ.get("REQWATCH_EXTRACT_MODEL", "qwen2.5:7b")
     limit = int(os.environ["REQWATCH_EXTRACT_LIMIT"]) if os.environ.get("REQWATCH_EXTRACT_LIMIT") else None
+    priority = int(os.environ["REQWATCH_EXTRACT_PRIORITY_DAYS"]) if os.environ.get("REQWATCH_EXTRACT_PRIORITY_DAYS") else None
     provider = OllamaProvider(model)
     with connect() as conn:
         apply_schema(conn)
-        totals = run_extraction(conn, provider, limit=limit)
+        totals = run_extraction(conn, provider, limit=limit, priority_recent_days=priority)
     secs = totals.per_posting_seconds
     print(json.dumps({
         "provider": provider.name, "model": provider.model,
