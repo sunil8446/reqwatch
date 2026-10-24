@@ -9,9 +9,14 @@ cases; notes never affect scoring.
 
 ## seniority — pick exactly one, or blank
 **Evidence order (no exceptions):**
-1. **An explicit level word in the title wins** — Intern, Junior, Associate,
-   Senior, Staff, Principal, Manager, Director. If the title has one, use it
-   and ignore years and body text.
+1. **An explicit level word in the title wins** — Intern, Junior, Senior,
+   Staff, Principal, Manager, Director, **Lead**. If the title has one, use it
+   and ignore years and body text. Two refinements:
+   - **Associate is a conditional level word:** it means `junior` **only when
+     no years are stated anywhere**. If years are stated, ignore "Associate"
+     and apply rule 2 (in finance, Associate is often a 2–5 year band).
+   - **Lead = `senior`** by title; **`leadership` if the text describes direct
+     reports**. Staff/Principal language still overrides Lead to `staff_plus`.
 2. Only when the title has **no** level word: use stated years —
    **0–1 years = `junior`, 2–4 = `mid`, 5+ = `senior`** (no overlaps) —
    and level language in the text.
@@ -20,11 +25,11 @@ cases; notes never affect scoring.
 | value | definition |
 |---|---|
 | `intern` | Title/text says internship, co-op, or student role. |
-| `junior` | Title says Junior or Associate (entry band), or 0–1 years by rule 2. |
+| `junior` | Title says Junior, or Associate **with no years stated** (see rule 1), or 0–1 years by rule 2. |
 | `mid` | No title level word, and 2–4 years (or clearly mid-level text). |
-| `senior` | Title says Senior/Sr., or 5+ years by rule 2. **A Lead with no direct reports is `senior`** — unless Staff/Principal language appears (then `staff_plus`). |
+| `senior` | Title says Senior/Sr. or **Lead** (no direct reports described), or 5+ years by rule 2. Staff/Principal language overrides Lead to `staff_plus`. |
 | `staff_plus` | Title says Staff, Principal, or Distinguished, or Architect **framed as a senior IC level**. A customer-facing **Solutions Architect is NOT `staff_plus` by title alone** — judge it by the same title/years rules as any role. |
-| `leadership` | Title says Manager, Director, VP, or Head of X, **or** the role has direct reports (hiring / performance duties in the text). |
+| `leadership` | Title says Manager, Director, VP, or Head of X, **or** the role has direct reports (hiring / performance duties in the text) — including a **Lead** whose text describes direct reports. |
 
 ## role_family — fixed list, pick exactly one
 - `data_engineering` — pipelines, ETL/ELT, warehouses/lakes, streaming, data infrastructure.
