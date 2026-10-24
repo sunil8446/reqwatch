@@ -1,0 +1,20 @@
+name: freshness-check
+# Independent of the pipeline schedule: catches MISSING runs (silent stops),
+# including GitHub auto-disabling scheduled workflows after 60 days without
+# repo activity. A failure here notifies via GitHub's workflow-failure email.
+on:
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch: {}
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -e .
+      - name: Check last successful run age (limit 30h)
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python -m reqwatch.freshness

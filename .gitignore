@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# No data files in the repo, ever (repo hygiene rule)
+data/
+*.csv
+!seed/seed_companies.csv
+*.jsonl
+dist/
+node_modules/

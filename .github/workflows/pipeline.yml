@@ -1,0 +1,31 @@
+name: daily-pipeline
+on:
+  schedule:
+    - cron: "17 11 * * *"   # 11:17 UTC daily (off-peak minute; GitHub cron is best-effort)
+  workflow_dispatch: {}
+concurrency:
+  group: reqwatch-pipeline
+  cancel-in-progress: false
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # only to commit bench/last_run.json (run numbers, no posting data)
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -e .
+      - name: Run ingestion
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          REQWATCH_USER_AGENT: ${{ vars.REQWATCH_USER_AGENT }}
+        run: |
+          python -m reqwatch.run_pipeline | tee bench/last_run.json
+      - name: Commit run report (numbers only; also keeps the schedule alive)
+        run: |
+          git config user.name "reqwatch-bot"
+          git config user.email "actions@github.com"
+          git add bench/last_run.json
+          git diff --cached --quiet || git commit -m "pipeline run report [skip ci]"
+          git push
