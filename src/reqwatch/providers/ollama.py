@@ -45,9 +45,17 @@ class OllamaProvider:
             "stream": False,
             "options": {"temperature": 0},
         }
-        with httpx.Client(timeout=self.timeout, transport=self.transport) as client:
-            resp = client.post(f"{self.base_url}/api/chat", json=payload)
-            resp.raise_for_status()
+        try:
+            with httpx.Client(timeout=self.timeout, transport=self.transport) as client:
+                resp = client.post(f"{self.base_url}/api/chat", json=payload)
+                resp.raise_for_status()
+        except httpx.HTTPError as exc:
+            # Timeouts / HTTP failures take the same path as invalid output:
+            # the runner retries once, then dead-letters. (Found 2026-10-24
+            # when a posting hit the 600s timeout during the v3 bench.)
+            err = ValueError(f"provider request failed: {exc}")
+            err.raw_text = None  # type: ignore[attr-defined]
+            raise err from exc
         data = resp.json()
         raw = (data.get("message") or {}).get("content", "")
         try:

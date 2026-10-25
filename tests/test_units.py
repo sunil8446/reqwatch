@@ -148,3 +148,15 @@ def test_evalnorm_aliases_apply_at_scoring():
     assert normalize_term("K8s") == "kubernetes"
     assert normalize_term("  AWS ") == "amazon web services"
     assert normalize_set(["PostgreSQL", "k8s", "dbt"]) == {"postgresql", "kubernetes", "dbt"}
+
+
+def test_ollama_provider_timeout_becomes_value_error():
+    import httpx as _httpx
+    import pytest as _pytest
+    from reqwatch.providers.ollama import OllamaProvider
+
+    def handler(request):
+        raise _httpx.ReadTimeout("slow", request=request)
+    provider = OllamaProvider("qwen2.5:3b", transport=_httpx.MockTransport(handler))
+    with _pytest.raises(ValueError, match="provider request failed"):
+        provider.extract("posting body")
