@@ -1,19 +1,19 @@
 {
   "seeded_companies": 104,
-  "run_id": "1eb4405d-ad7a-4fc2-9578-8cc2f15f86b5",
-  "db_size_bytes": 50913280,
-  "db_growth_bytes": 811008,
-  "projected_months_until_1gb": 41.43,
+  "run_id": "35b1e16a-d3b6-45bd-bb06-51b56c31932a",
+  "db_size_bytes": 50987008,
+  "db_growth_bytes": 73728,
+  "projected_months_until_1gb": 455.72,
   "companies_ok": 98,
   "companies_failed": 0,
-  "postings_new": 80,
-  "postings_changed": 62,
-  "postings_closed": 102,
-  "postings_seen": 7100,
+  "postings_new": 0,
+  "postings_changed": 2,
+  "postings_closed": 47,
+  "postings_seen": 7094,
   "filter_version": "title-filter-v1",
-  "postings_listed": 15824,
-  "postings_kept_by_filter": 7100,
-  "filter_keep_rate": 0.4487,
+  "postings_listed": 15825,
+  "postings_kept_by_filter": 7094,
+  "filter_keep_rate": 0.4483,
   "per_board": [
     {
       "company": "SpaceX",
@@ -23,26 +23,26 @@
       "kept": 1411,
       "stored": 1411,
       "keep_rate": 0.491,
-      "content_fetches_skipped": 0
+      "content_fetches_skipped": 1411
     },
     {
       "company": "Databricks",
       "ats": "greenhouse",
       "board": "databricks",
-      "listed": 901,
-      "kept": 522,
-      "stored": 522,
-      "keep_rate": 0.5794,
-      "content_fetches_skipped": 505
+      "listed": 909,
+      "kept": 523,
+      "stored": 523,
+      "keep_rate": 0.5754,
+      "content_fetches_skipped": 500
     },
     {
       "company": "OpenAI",
       "ats": "ashby",
       "board": "openai",
-      "listed": 812,
-      "kept": 455,
-      "stored": 455,
-      "keep_rate": 0.5603,
+      "listed": 810,
+      "kept": 454,
+      "stored": 454,
+      "keep_rate": 0.5605,
       "content_fetches_skipped": 0
     },
     {
@@ -53,7 +53,7 @@
       "kept": 235,
       "stored": 235,
       "keep_rate": 0.315,
-      "content_fetches_skipped": 219
+      "content_fetches_skipped": 228
     },
     {
       "company": "Anthropic",
@@ -63,17 +63,17 @@
       "kept": 338,
       "stored": 338,
       "keep_rate": 0.5007,
-      "content_fetches_skipped": 332
+      "content_fetches_skipped": 336
     },
     {
       "company": "Cloudflare",
       "ats": "greenhouse",
       "board": "cloudflare",
-      "listed": 464,
-      "kept": 230,
-      "stored": 230,
-      "keep_rate": 0.4957,
-      "content_fetches_skipped": 0
+      "listed": 463,
+      "kept": 229,
+      "stored": 229,
+      "keep_rate": 0.4946,
+      "content_fetches_skipped": 228
     },
     {
       "company": "Elastic",
@@ -83,7 +83,7 @@
       "kept": 261,
       "stored": 261,
       "keep_rate": 0.6413,
-      "content_fetches_skipped": 251
+      "content_fetches_skipped": 261
     },
     {
       "company": "Datadog",
@@ -99,11 +99,11 @@
       "company": "Okta",
       "ats": "greenhouse",
       "board": "okta",
-      "listed": 387,
-      "kept": 189,
-      "stored": 189,
-      "keep_rate": 0.4884,
-      "content_fetches_skipped": 180
+      "listed": 386,
+      "kept": 188,
+      "stored": 188,
+      "keep_rate": 0.487,
+      "content_fetches_skipped": 187
     },
     {
       "company": "Harvey",
@@ -123,7 +123,7 @@
       "kept": 154,
       "stored": 154,
       "keep_rate": 0.4208,
-      "content_fetches_skipped": 149
+      "content_fetches_skipped": 153
     },
     {
       "company": "Snowflake",
@@ -139,10 +139,10 @@
       "company": "Palantir",
       "ats": "lever",
       "board": "palantir",
-      "listed": 299,
+      "listed": 301,
       "kept": 155,
       "stored": 155,
-      "keep_rate": 0.5184,
+      "keep_rate": 0.515,
       "content_fetches_skipped": 0
     },
     {
@@ -153,17 +153,17 @@
       "kept": 69,
       "stored": 69,
       "keep_rate": 0.2624,
-      "content_fetches_skipped": 66
+      "content_fetches_skipped": 69
     },
     {
       "company": "Coinbase",
       "ats": "greenhouse",
       "board": "coinbase",
-      "listed": 250,
+      "listed": 254,
       "kept": 109,
       "stored": 109,
-      "keep_rate": 0.436,
-      "content_fetches_skipped": 97
+      "keep_rate": 0.4291,
+      "content_fetches_skipped": 107
     },
     {
       "company": "Affirm",
@@ -173,7 +173,7 @@
       "kept": 154,
       "stored": 154,
       "keep_rate": 0.6311,
-      "content_fetches_skipped": 0
+      "content_fetches_skipped": 147
     },
     {
       "company": "Adyen",
@@ -183,7 +183,7 @@
       "kept": 88,
       "stored": 88,
       "keep_rate": 0.3697,
-      "content_fetches_skipped": 83
+      "content_fetches_skipped": 88
     },
     {
       "company": "GitLab",
@@ -193,7 +193,7 @@
       "kept": 119,
       "stored": 119,
       "keep_rate": 0.5,
-      "content_fetches_skipped": 112
+      "content_fetches_skipped": 116
     },
     {
       "company": "ClickHouse",
@@ -213,7 +213,7 @@
       "kept": 47,
       "stored": 47,
       "keep_rate": 0.2304,
-      "content_fetches_skipped": 44
+      "content_fetches_skipped": 47
     },
     {
       "company": "Airbnb",
@@ -229,10 +229,10 @@
       "company": "Ramp",
       "ats": "ashby",
       "board": "ramp",
-      "listed": 171,
+      "listed": 172,
       "kept": 43,
       "stored": 43,
-      "keep_rate": 0.2515,
+      "keep_rate": 0.25,
       "content_fetches_skipped": 0
     },
     {
@@ -253,7 +253,7 @@
       "kept": 70,
       "stored": 70,
       "keep_rate": 0.4118,
-      "content_fetches_skipped": 68
+      "content_fetches_skipped": 70
     },
     {
       "company": "Pinterest",
@@ -263,7 +263,7 @@
       "kept": 64,
       "stored": 64,
       "keep_rate": 0.3765,
-      "content_fetches_skipped": 61
+      "content_fetches_skipped": 64
     },
     {
       "company": "Fivetran",
@@ -273,7 +273,7 @@
       "kept": 68,
       "stored": 68,
       "keep_rate": 0.4146,
-      "content_fetches_skipped": 58
+      "content_fetches_skipped": 68
     },
     {
       "company": "Reddit",
@@ -293,7 +293,7 @@
       "kept": 73,
       "stored": 73,
       "keep_rate": 0.4562,
-      "content_fetches_skipped": 70
+      "content_fetches_skipped": 73
     },
     {
       "company": "Doctolib",
@@ -316,16 +316,6 @@
       "content_fetches_skipped": 0
     },
     {
-      "company": "ElevenLabs",
-      "ats": "ashby",
-      "board": "elevenlabs",
-      "listed": 144,
-      "kept": 41,
-      "stored": 41,
-      "keep_rate": 0.2847,
-      "content_fetches_skipped": 0
-    },
-    {
       "company": "Figma",
       "ats": "greenhouse",
       "board": "figma",
@@ -333,7 +323,17 @@
       "kept": 39,
       "stored": 39,
       "keep_rate": 0.2786,
-      "content_fetches_skipped": 38
+      "content_fetches_skipped": 39
+    },
+    {
+      "company": "ElevenLabs",
+      "ats": "ashby",
+      "board": "elevenlabs",
+      "listed": 139,
+      "kept": 39,
+      "stored": 39,
+      "keep_rate": 0.2806,
+      "content_fetches_skipped": 0
     },
     {
       "company": "Perplexity",
@@ -363,7 +363,7 @@
       "kept": 32,
       "stored": 32,
       "keep_rate": 0.2424,
-      "content_fetches_skipped": 31
+      "content_fetches_skipped": 32
     },
     {
       "company": "Alan",
@@ -379,10 +379,10 @@
       "company": "Cohere",
       "ats": "ashby",
       "board": "cohere",
-      "listed": 122,
-      "kept": 56,
-      "stored": 56,
-      "keep_rate": 0.459,
+      "listed": 120,
+      "kept": 54,
+      "stored": 54,
+      "keep_rate": 0.45,
       "content_fetches_skipped": 0
     },
     {
@@ -393,7 +393,7 @@
       "kept": 72,
       "stored": 72,
       "keep_rate": 0.6,
-      "content_fetches_skipped": 66
+      "content_fetches_skipped": 71
     },
     {
       "company": "Asana",
@@ -403,7 +403,7 @@
       "kept": 42,
       "stored": 42,
       "keep_rate": 0.3818,
-      "content_fetches_skipped": 38
+      "content_fetches_skipped": 42
     },
     {
       "company": "Mercor",
@@ -443,7 +443,7 @@
       "kept": 27,
       "stored": 27,
       "keep_rate": 0.2812,
-      "content_fetches_skipped": 22
+      "content_fetches_skipped": 27
     },
     {
       "company": "Spotify",
@@ -463,7 +463,7 @@
       "kept": 43,
       "stored": 43,
       "keep_rate": 0.4886,
-      "content_fetches_skipped": 42
+      "content_fetches_skipped": 43
     },
     {
       "company": "Gusto",
@@ -513,7 +513,7 @@
       "kept": 35,
       "stored": 35,
       "keep_rate": 0.4667,
-      "content_fetches_skipped": 8
+      "content_fetches_skipped": 34
     },
     {
       "company": "Temporal",
@@ -543,7 +543,7 @@
       "kept": 37,
       "stored": 37,
       "keep_rate": 0.5362,
-      "content_fetches_skipped": 36
+      "content_fetches_skipped": 37
     },
     {
       "company": "Twitch",
@@ -563,26 +563,26 @@
       "kept": 27,
       "stored": 27,
       "keep_rate": 0.4355,
-      "content_fetches_skipped": 23
+      "content_fetches_skipped": 27
     },
     {
       "company": "Duolingo",
       "ats": "greenhouse",
       "board": "duolingo",
-      "listed": 57,
+      "listed": 56,
       "kept": 17,
       "stored": 17,
-      "keep_rate": 0.2982,
+      "keep_rate": 0.3036,
       "content_fetches_skipped": 16
     },
     {
       "company": "Benchling",
       "ats": "ashby",
       "board": "benchling",
-      "listed": 55,
+      "listed": 54,
       "kept": 13,
       "stored": 13,
-      "keep_rate": 0.2364,
+      "keep_rate": 0.2407,
       "content_fetches_skipped": 0
     },
     {
@@ -613,7 +613,7 @@
       "kept": 29,
       "stored": 29,
       "keep_rate": 0.7073,
-      "content_fetches_skipped": 28
+      "content_fetches_skipped": 29
     },
     {
       "company": "SingleStore",
@@ -623,7 +623,7 @@
       "kept": 23,
       "stored": 23,
       "keep_rate": 0.561,
-      "content_fetches_skipped": 22
+      "content_fetches_skipped": 23
     },
     {
       "company": "Sentry",
@@ -713,7 +713,7 @@
       "kept": 7,
       "stored": 7,
       "keep_rate": 0.2333,
-      "content_fetches_skipped": 5
+      "content_fetches_skipped": 7
     },
     {
       "company": "Contentful",
@@ -789,10 +789,10 @@
       "company": "Collibra",
       "ats": "greenhouse",
       "board": "collibra",
-      "listed": 19,
+      "listed": 18,
       "kept": 6,
       "stored": 6,
-      "keep_rate": 0.3158,
+      "keep_rate": 0.3333,
       "content_fetches_skipped": 6
     },
     {
