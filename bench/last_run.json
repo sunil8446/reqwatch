@@ -1,59 +1,59 @@
 {
   "seeded_companies": 104,
-  "run_id": "280e7298-b5bb-4111-b0c4-dd994fa8825a",
-  "db_size_bytes": 57311232,
-  "db_growth_bytes": 778240,
-  "projected_months_until_1gb": 42.91,
+  "run_id": "d247147a-645f-495c-96d1-53fed65a28d1",
+  "db_size_bytes": 57425920,
+  "db_growth_bytes": 114688,
+  "projected_months_until_1gb": 291.12,
   "companies_ok": 97,
   "companies_failed": 1,
-  "postings_new": 54,
-  "postings_changed": 90,
-  "postings_closed": 108,
-  "postings_seen": 7000,
+  "postings_new": 4,
+  "postings_changed": 3,
+  "postings_closed": 78,
+  "postings_seen": 6996,
   "filter_version": "title-filter-v1",
-  "postings_listed": 15759,
-  "postings_kept_by_filter": 7000,
-  "filter_keep_rate": 0.4442,
+  "postings_listed": 15755,
+  "postings_kept_by_filter": 6996,
+  "filter_keep_rate": 0.444,
   "per_board": [
     {
       "company": "SpaceX",
       "ats": "greenhouse",
       "board": "spacex",
-      "listed": 2898,
-      "kept": 1428,
-      "stored": 1428,
-      "keep_rate": 0.4928,
-      "content_fetches_skipped": 0
+      "listed": 2900,
+      "kept": 1426,
+      "stored": 1426,
+      "keep_rate": 0.4917,
+      "content_fetches_skipped": 1382
     },
     {
       "company": "Databricks",
       "ats": "greenhouse",
       "board": "databricks",
-      "listed": 924,
-      "kept": 528,
-      "stored": 528,
-      "keep_rate": 0.5714,
-      "content_fetches_skipped": 502
+      "listed": 922,
+      "kept": 527,
+      "stored": 527,
+      "keep_rate": 0.5716,
+      "content_fetches_skipped": 521
     },
     {
       "company": "OpenAI",
       "ats": "ashby",
       "board": "openai",
-      "listed": 819,
+      "listed": 816,
       "kept": 462,
       "stored": 462,
-      "keep_rate": 0.5641,
+      "keep_rate": 0.5662,
       "content_fetches_skipped": 0
     },
     {
       "company": "Stripe",
       "ats": "greenhouse",
       "board": "stripe",
-      "listed": 765,
+      "listed": 766,
       "kept": 246,
       "stored": 246,
-      "keep_rate": 0.3216,
-      "content_fetches_skipped": 244
+      "keep_rate": 0.3211,
+      "content_fetches_skipped": 245
     },
     {
       "company": "Anthropic",
@@ -63,7 +63,7 @@
       "kept": 333,
       "stored": 333,
       "keep_rate": 0.4933,
-      "content_fetches_skipped": 325
+      "content_fetches_skipped": 332
     },
     {
       "company": "Cloudflare",
@@ -73,7 +73,7 @@
       "kept": 224,
       "stored": 224,
       "keep_rate": 0.4828,
-      "content_fetches_skipped": 208
+      "content_fetches_skipped": 215
     },
     {
       "company": "Elastic",
@@ -83,27 +83,17 @@
       "kept": 272,
       "stored": 272,
       "keep_rate": 0.64,
-      "content_fetches_skipped": 269
+      "content_fetches_skipped": 272
     },
     {
       "company": "Datadog",
       "ats": "greenhouse",
       "board": "datadog",
-      "listed": 400,
-      "kept": 75,
-      "stored": 75,
-      "keep_rate": 0.1875,
+      "listed": 401,
+      "kept": 76,
+      "stored": 76,
+      "keep_rate": 0.1895,
       "content_fetches_skipped": 75
-    },
-    {
-      "company": "MongoDB",
-      "ats": "greenhouse",
-      "board": "mongodb",
-      "listed": 375,
-      "kept": 152,
-      "stored": 152,
-      "keep_rate": 0.4053,
-      "content_fetches_skipped": 145
     },
     {
       "company": "Okta",
@@ -113,26 +103,36 @@
       "kept": 178,
       "stored": 178,
       "keep_rate": 0.4747,
-      "content_fetches_skipped": 174
+      "content_fetches_skipped": 177
+    },
+    {
+      "company": "MongoDB",
+      "ats": "greenhouse",
+      "board": "mongodb",
+      "listed": 374,
+      "kept": 151,
+      "stored": 151,
+      "keep_rate": 0.4037,
+      "content_fetches_skipped": 147
     },
     {
       "company": "Harvey",
       "ats": "ashby",
       "board": "harvey",
-      "listed": 371,
+      "listed": 373,
       "kept": 100,
       "stored": 100,
-      "keep_rate": 0.2695,
+      "keep_rate": 0.2681,
       "content_fetches_skipped": 0
     },
     {
       "company": "Snowflake",
       "ats": "ashby",
       "board": "snowflake",
-      "listed": 371,
+      "listed": 372,
       "kept": 197,
       "stored": 197,
-      "keep_rate": 0.531,
+      "keep_rate": 0.5296,
       "content_fetches_skipped": 0
     },
     {
@@ -149,11 +149,11 @@
       "company": "Coinbase",
       "ats": "greenhouse",
       "board": "coinbase",
-      "listed": 284,
+      "listed": 283,
       "kept": 113,
       "stored": 113,
-      "keep_rate": 0.3979,
-      "content_fetches_skipped": 110
+      "keep_rate": 0.3993,
+      "content_fetches_skipped": 113
     },
     {
       "company": "Brex",
@@ -173,7 +173,7 @@
       "kept": 101,
       "stored": 101,
       "keep_rate": 0.3961,
-      "content_fetches_skipped": 96
+      "content_fetches_skipped": 101
     },
     {
       "company": "GitLab",
@@ -183,7 +183,7 @@
       "kept": 116,
       "stored": 116,
       "keep_rate": 0.4677,
-      "content_fetches_skipped": 0
+      "content_fetches_skipped": 116
     },
     {
       "company": "Affirm",
@@ -193,7 +193,7 @@
       "kept": 137,
       "stored": 137,
       "keep_rate": 0.6171,
-      "content_fetches_skipped": 130
+      "content_fetches_skipped": 135
     },
     {
       "company": "Airbnb",
@@ -223,16 +223,16 @@
       "kept": 45,
       "stored": 45,
       "keep_rate": 0.225,
-      "content_fetches_skipped": 45
+      "content_fetches_skipped": 44
     },
     {
       "company": "Ramp",
       "ats": "ashby",
       "board": "ramp",
-      "listed": 171,
-      "kept": 40,
-      "stored": 40,
-      "keep_rate": 0.2339,
+      "listed": 169,
+      "kept": 39,
+      "stored": 39,
+      "keep_rate": 0.2308,
       "content_fetches_skipped": 0
     },
     {
@@ -243,7 +243,7 @@
       "kept": 87,
       "stored": 87,
       "keep_rate": 0.5179,
-      "content_fetches_skipped": 65
+      "content_fetches_skipped": 85
     },
     {
       "company": "Pinterest",
@@ -253,7 +253,7 @@
       "kept": 64,
       "stored": 64,
       "keep_rate": 0.381,
-      "content_fetches_skipped": 0
+      "content_fetches_skipped": 61
     },
     {
       "company": "Fivetran",
@@ -263,16 +263,16 @@
       "kept": 77,
       "stored": 77,
       "keep_rate": 0.4611,
-      "content_fetches_skipped": 70
+      "content_fetches_skipped": 73
     },
     {
       "company": "Lyft",
       "ats": "greenhouse",
       "board": "lyft",
-      "listed": 167,
+      "listed": 166,
       "kept": 66,
       "stored": 66,
-      "keep_rate": 0.3952,
+      "keep_rate": 0.3976,
       "content_fetches_skipped": 66
     },
     {
@@ -283,7 +283,7 @@
       "kept": 108,
       "stored": 108,
       "keep_rate": 0.6626,
-      "content_fetches_skipped": 105
+      "content_fetches_skipped": 106
     },
     {
       "company": "Notion",
@@ -303,7 +303,7 @@
       "kept": 60,
       "stored": 60,
       "keep_rate": 0.4,
-      "content_fetches_skipped": 57
+      "content_fetches_skipped": 59
     },
     {
       "company": "Figma",
@@ -329,10 +329,10 @@
       "company": "ElevenLabs",
       "ats": "ashby",
       "board": "elevenlabs",
-      "listed": 139,
+      "listed": 137,
       "kept": 35,
       "stored": 35,
-      "keep_rate": 0.2518,
+      "keep_rate": 0.2555,
       "content_fetches_skipped": 0
     },
     {
@@ -373,7 +373,7 @@
       "kept": 29,
       "stored": 29,
       "keep_rate": 0.2266,
-      "content_fetches_skipped": 23
+      "content_fetches_skipped": 29
     },
     {
       "company": "Cohere",
@@ -409,10 +409,10 @@
       "company": "LangChain",
       "ats": "ashby",
       "board": "langchain",
-      "listed": 98,
+      "listed": 100,
       "kept": 43,
       "stored": 43,
-      "keep_rate": 0.4388,
+      "keep_rate": 0.43,
       "content_fetches_skipped": 0
     },
     {
@@ -443,7 +443,7 @@
       "kept": 25,
       "stored": 25,
       "keep_rate": 0.2907,
-      "content_fetches_skipped": 24
+      "content_fetches_skipped": 25
     },
     {
       "company": "Vanta",
@@ -473,7 +473,7 @@
       "kept": 41,
       "stored": 41,
       "keep_rate": 0.4824,
-      "content_fetches_skipped": 40
+      "content_fetches_skipped": 41
     },
     {
       "company": "Gusto",
@@ -483,7 +483,7 @@
       "kept": 37,
       "stored": 37,
       "keep_rate": 0.4458,
-      "content_fetches_skipped": 35
+      "content_fetches_skipped": 37
     },
     {
       "company": "Temporal",
@@ -503,7 +503,7 @@
       "kept": 26,
       "stored": 26,
       "keep_rate": 0.3333,
-      "content_fetches_skipped": 22
+      "content_fetches_skipped": 26
     },
     {
       "company": "Chime",
@@ -533,7 +533,7 @@
       "kept": 37,
       "stored": 37,
       "keep_rate": 0.5441,
-      "content_fetches_skipped": 34
+      "content_fetches_skipped": 36
     },
     {
       "company": "Duolingo",
@@ -543,7 +543,7 @@
       "kept": 18,
       "stored": 18,
       "keep_rate": 0.3051,
-      "content_fetches_skipped": 17
+      "content_fetches_skipped": 18
     },
     {
       "company": "Twitch",
@@ -553,7 +553,7 @@
       "kept": 20,
       "stored": 20,
       "keep_rate": 0.3636,
-      "content_fetches_skipped": 17
+      "content_fetches_skipped": 20
     },
     {
       "company": "Benchling",
@@ -583,7 +583,7 @@
       "kept": 19,
       "stored": 19,
       "keep_rate": 0.413,
-      "content_fetches_skipped": 18
+      "content_fetches_skipped": 19
     },
     {
       "company": "SingleStore",
@@ -593,7 +593,7 @@
       "kept": 24,
       "stored": 24,
       "keep_rate": 0.5854,
-      "content_fetches_skipped": 23
+      "content_fetches_skipped": 24
     },
     {
       "company": "Coursera",
@@ -643,7 +643,7 @@
       "kept": 22,
       "stored": 22,
       "keep_rate": 0.5946,
-      "content_fetches_skipped": 0
+      "content_fetches_skipped": 22
     },
     {
       "company": "Polymarket",
@@ -673,7 +673,7 @@
       "kept": 11,
       "stored": 11,
       "keep_rate": 0.3333,
-      "content_fetches_skipped": 10
+      "content_fetches_skipped": 11
     },
     {
       "company": "Linear",
@@ -886,16 +886,6 @@
       "content_fetches_skipped": 0
     },
     {
-      "company": "MotherDuck",
-      "ats": "ashby",
-      "board": "motherduck",
-      "listed": 7,
-      "kept": 4,
-      "stored": 4,
-      "keep_rate": 0.5714,
-      "content_fetches_skipped": 0
-    },
-    {
       "company": "Pinecone",
       "ats": "ashby",
       "board": "pinecone",
@@ -913,6 +903,16 @@
       "kept": 3,
       "stored": 3,
       "keep_rate": 0.5,
+      "content_fetches_skipped": 0
+    },
+    {
+      "company": "MotherDuck",
+      "ats": "ashby",
+      "board": "motherduck",
+      "listed": 6,
+      "kept": 4,
+      "stored": 4,
+      "keep_rate": 0.6667,
       "content_fetches_skipped": 0
     },
     {
@@ -989,7 +989,5 @@
   "health_alerts": [
     "Doctolib (greenhouse:doctolib): 3+ consecutive failed runs"
   ],
-  "drift_alerts": [
-    "company_id=32: schema changed 137b4237 -> 1e713104"
-  ]
+  "drift_alerts": []
 }
